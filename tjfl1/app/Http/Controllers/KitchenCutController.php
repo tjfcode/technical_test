@@ -5,11 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
-#use App\User;
 
 class KitchenCutController extends Controller
 {
-
 
     public function index() {
         $this->dateRange();
@@ -43,9 +41,7 @@ class KitchenCutController extends Controller
             $page['date_values']           = $this->getDates();
 
         }
-
         return view('kitchencut_daterange', $page  );
-
     }
 
 
