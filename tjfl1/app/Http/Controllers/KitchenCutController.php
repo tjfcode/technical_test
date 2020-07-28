@@ -9,10 +9,6 @@ use Illuminate\Http\Request;
 class KitchenCutController extends Controller
 {
 
-    public function index() {
-        $this->dateRange();
-    }
-
     /**
      * If not a submit request display form with options for user to pick from
      * if a submit request get the data and display
@@ -87,7 +83,6 @@ class KitchenCutController extends Controller
             
             }
 
-
             $results = DB::select('SELECT ih.id as invoice_id, status, SUM(value) AS total, date , locations.name as location_name
                                    FROM invoice_lines il
                                    LEFT join invoice_headers ih ON il.invoice_header_id = ih.id 
@@ -126,7 +121,7 @@ class KitchenCutController extends Controller
     }
 
     /**
-     * Get unique staus
+     * Get unique status
      *
      * @return array of objects
      */
@@ -164,7 +159,7 @@ class KitchenCutController extends Controller
                                    GROUP BY status asc', [$locationId]);
             }
         else {
-                // Log as error and can send error message to view as well if required
+                // Send error message to view as well if required
                 $error = 'Invalid location provided';
                 $results = null;
         }

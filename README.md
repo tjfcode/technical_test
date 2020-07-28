@@ -14,12 +14,13 @@
 
 Good luck :)
 
+
 # Comments from Tracey
+
 I decided to use Laravel for the first time, so took longer than planned.
-I know it doesn't look great but I think it does what is required.
+I'm more of a backend developer so I know the front end will not look great but I think it does what is required.
 Given more time I would add more error checking, and try/catches etc.
 I would like to use something like zend for the SQL.
-
 
 My files are:
 
@@ -32,3 +33,8 @@ I modified this one:
 
    dump/base.sql
 
+Please let me know if you require any screen shots.
+
+Thanks,
+
+Tracey - tforey@gmail.com
